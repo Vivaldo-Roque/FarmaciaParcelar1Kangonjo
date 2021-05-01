@@ -54,19 +54,19 @@ namespace FarmaciaParcelar1.Frms
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dataderegisto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnConsultar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.CmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.CmbGenero = new System.Windows.Forms.ComboBox();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.TxtID = new System.Windows.Forms.TextBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnConsultar = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +199,7 @@ namespace FarmaciaParcelar1.Frms
             this.Telefone,
             this.Email,
             this.Dataderegisto});
-            this.DgvClientes.Location = new System.Drawing.Point(308, 128);
+            this.DgvClientes.Location = new System.Drawing.Point(316, 271);
             this.DgvClientes.Name = "DgvClientes";
             this.DgvClientes.RowHeadersWidth = 51;
             this.DgvClientes.RowTemplate.Height = 24;
@@ -236,7 +236,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // Género
             // 
-            this.Género.DataPropertyName = "idgenero";
+            this.Género.DataPropertyName = "genero";
             this.Género.HeaderText = "Género";
             this.Género.MinimumWidth = 6;
             this.Género.Name = "Género";
@@ -254,7 +254,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // EstadoCivil
             // 
-            this.EstadoCivil.DataPropertyName = "idEstadoCivil";
+            this.EstadoCivil.DataPropertyName = "EstadoCivil";
             this.EstadoCivil.HeaderText = "Estado Civil";
             this.EstadoCivil.MinimumWidth = 6;
             this.EstadoCivil.Name = "EstadoCivil";
@@ -292,62 +292,24 @@ namespace FarmaciaParcelar1.Frms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(625, 86);
+            this.label10.Location = new System.Drawing.Point(633, 229);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 38);
             this.label10.TabIndex = 21;
             this.label10.Text = "Clientes:";
             // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.Location = new System.Drawing.Point(280, 394);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(123, 86);
-            this.BtnSalvar.TabIndex = 22;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnCadastrar_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Location = new System.Drawing.Point(432, 394);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(123, 86);
-            this.BtnEditar.TabIndex = 23;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnConsultar
-            // 
-            this.BtnConsultar.Location = new System.Drawing.Point(582, 394);
-            this.BtnConsultar.Name = "BtnConsultar";
-            this.BtnConsultar.Size = new System.Drawing.Size(123, 86);
-            this.BtnConsultar.TabIndex = 24;
-            this.BtnConsultar.Text = "Consultar";
-            this.BtnConsultar.UseVisualStyleBackColor = true;
-            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
-            // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(409, 11);
+            this.BtnLimpar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.cleaning_broom;
+            this.BtnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLimpar.Location = new System.Drawing.Point(624, 26);
             this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(95, 43);
+            this.BtnLimpar.Size = new System.Drawing.Size(148, 171);
             this.BtnLimpar.TabIndex = 25;
             this.BtnLimpar.Text = "Limpar";
+            this.BtnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.AllowDrop = true;
-            this.BtnEliminar.Location = new System.Drawing.Point(724, 394);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(123, 86);
-            this.BtnEliminar.TabIndex = 26;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // label4
             // 
@@ -360,11 +322,14 @@ namespace FarmaciaParcelar1.Frms
             // 
             // BtnPesquisar
             // 
-            this.BtnPesquisar.Location = new System.Drawing.Point(308, 60);
+            this.BtnPesquisar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.binocular;
+            this.BtnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPesquisar.Location = new System.Drawing.Point(470, 26);
             this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(95, 43);
+            this.BtnPesquisar.Size = new System.Drawing.Size(148, 171);
             this.BtnPesquisar.TabIndex = 29;
             this.BtnPesquisar.Text = "Pesquisar";
+            this.BtnPesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnPesquisar.UseVisualStyleBackColor = true;
             this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
@@ -386,33 +351,29 @@ namespace FarmaciaParcelar1.Frms
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(308, 12);
+            this.BtnFechar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.logout_1;
+            this.BtnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnFechar.Location = new System.Drawing.Point(778, 26);
             this.BtnFechar.Name = "BtnFechar";
-            this.BtnFechar.Size = new System.Drawing.Size(95, 42);
+            this.BtnFechar.Size = new System.Drawing.Size(148, 171);
             this.BtnFechar.TabIndex = 32;
             this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnFechar.UseVisualStyleBackColor = true;
             this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(409, 61);
+            this.BtnNovo.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.task_checklist_add;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnNovo.Location = new System.Drawing.Point(316, 26);
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(95, 42);
+            this.BtnNovo.Size = new System.Drawing.Size(148, 171);
             this.BtnNovo.TabIndex = 33;
             this.BtnNovo.Text = "Novo";
+            this.BtnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Location = new System.Drawing.Point(870, 394);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(123, 86);
-            this.BtnCancelar.TabIndex = 34;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // TxtID
             // 
@@ -420,6 +381,72 @@ namespace FarmaciaParcelar1.Frms
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(212, 22);
             this.TxtID.TabIndex = 35;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.task_checklist_remove;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnCancelar.Location = new System.Drawing.Point(932, 537);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(148, 171);
+            this.BtnCancelar.TabIndex = 34;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.AllowDrop = true;
+            this.BtnEliminar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.bin_2;
+            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEliminar.Location = new System.Drawing.Point(778, 537);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(148, 171);
+            this.BtnEliminar.TabIndex = 26;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnConsultar
+            // 
+            this.BtnConsultar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.checklist;
+            this.BtnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnConsultar.Location = new System.Drawing.Point(624, 537);
+            this.BtnConsultar.Name = "BtnConsultar";
+            this.BtnConsultar.Size = new System.Drawing.Size(148, 171);
+            this.BtnConsultar.TabIndex = 24;
+            this.BtnConsultar.Text = "Consultar";
+            this.BtnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnConsultar.UseVisualStyleBackColor = true;
+            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.pen_write_paper;
+            this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEditar.Location = new System.Drawing.Point(470, 537);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(148, 171);
+            this.BtnEditar.TabIndex = 23;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.add_bold;
+            this.BtnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSalvar.Location = new System.Drawing.Point(316, 537);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(148, 171);
+            this.BtnSalvar.TabIndex = 22;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // FrmClientes
             // 
@@ -492,6 +519,10 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Windows.Forms.ComboBox CmbEstadoCivil;
         private System.Windows.Forms.ComboBox CmbGenero;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn BI;
@@ -501,9 +532,5 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dataderegisto;
-        private System.Windows.Forms.Button BtnFechar;
-        private System.Windows.Forms.Button BtnNovo;
-        private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.TextBox TxtID;
     }
 }

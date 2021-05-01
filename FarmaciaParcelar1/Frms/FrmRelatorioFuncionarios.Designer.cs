@@ -43,7 +43,7 @@ namespace FarmaciaParcelar1.Frms
             this.crystalReportViewerFuncionarios.Size = new System.Drawing.Size(954, 688);
             this.crystalReportViewerFuncionarios.TabIndex = 0;
             this.crystalReportViewerFuncionarios.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            this.crystalReportViewerFuncionarios.Load += new System.EventHandler(this.crystalReportViewerFuncionarios_Load);
+            this.crystalReportViewerFuncionarios.Load += new System.EventHandler(this.CrystalReportViewerFuncionarios_Load);
             // 
             // FrmRelatorioFuncionarios
             // 

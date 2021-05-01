@@ -131,7 +131,7 @@ namespace FarmaciaParcelar1.Frms
             Buttons(0);
         }
 
-        private void BtnRegistrar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
             funcionario.Nome = TxtNome.Text;
             funcionario.Data = DtpData.Value;

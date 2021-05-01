@@ -2,7 +2,7 @@
 {
 
 
-    partial class farmaciaDataSet
+    partial class FarmaciaDataSet
     {
     }
 }

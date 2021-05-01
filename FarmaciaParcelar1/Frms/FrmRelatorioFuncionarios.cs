@@ -21,7 +21,7 @@ namespace FarmaciaParcelar1.Frms
             InitializeComponent();
         }
 
-        private void crystalReportViewerFuncionarios_Load(object sender, EventArgs e)
+        private void CrystalReportViewerFuncionarios_Load(object sender, EventArgs e)
         {
 
         }

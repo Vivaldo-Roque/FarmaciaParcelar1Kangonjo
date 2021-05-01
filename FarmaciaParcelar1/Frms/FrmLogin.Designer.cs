@@ -29,6 +29,7 @@ namespace FarmaciaParcelar1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.myGroupBox1 = new FarmaciaParcelar1.Tools.myGroupBox();
             this.GbSenha = new FarmaciaParcelar1.Tools.myGroupBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@ namespace FarmaciaParcelar1
             // myGroupBox1
             // 
             this.myGroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.myGroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.myGroupBox1.BorderColor = System.Drawing.Color.White;
             this.myGroupBox1.Controls.Add(this.GbSenha);
             this.myGroupBox1.Controls.Add(this.GbUsuario);
@@ -125,6 +127,8 @@ namespace FarmaciaParcelar1
             // BtnSair
             // 
             this.BtnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.BtnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSair.BackgroundImage")));
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSair.FlatAppearance.BorderSize = 0;
             this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
@@ -132,15 +136,18 @@ namespace FarmaciaParcelar1
             this.BtnSair.Location = new System.Drawing.Point(258, 303);
             this.BtnSair.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(246, 116);
+            this.BtnSair.Size = new System.Drawing.Size(246, 152);
             this.BtnSair.TabIndex = 11;
             this.BtnSair.Text = "Sair";
+            this.BtnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // BtnEntrar
             // 
             this.BtnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(139)))), ((int)(((byte)(54)))));
+            this.BtnEntrar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.login_2;
+            this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnEntrar.FlatAppearance.BorderSize = 0;
             this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
@@ -148,9 +155,10 @@ namespace FarmaciaParcelar1
             this.BtnEntrar.Location = new System.Drawing.Point(12, 303);
             this.BtnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(247, 116);
+            this.BtnEntrar.Size = new System.Drawing.Size(247, 152);
             this.BtnEntrar.TabIndex = 10;
             this.BtnEntrar.Text = "Entrar";
+            this.BtnEntrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnEntrar.UseVisualStyleBackColor = false;
             this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
@@ -159,15 +167,15 @@ namespace FarmaciaParcelar1
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(516, 431);
+            this.ClientSize = new System.Drawing.Size(516, 466);
             this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.myGroupBox1);
             this.Controls.Add(this.BtnEntrar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(516, 431);
-            this.MinimumSize = new System.Drawing.Size(516, 431);
+            this.MaximumSize = new System.Drawing.Size(516, 466);
+            this.MinimumSize = new System.Drawing.Size(516, 466);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

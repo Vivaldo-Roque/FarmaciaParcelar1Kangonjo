@@ -109,7 +109,7 @@ namespace FarmaciaParcelar1.Frms
             Buttons(0);
         }
 
-        public void BtnAdicionar_Click(object sender, EventArgs e)
+        public void BtnSalvar_Click(object sender, EventArgs e)
         {
             produto.Nome = TxtNome.Text;
             produto.Descricao = TxtDescricao.Text;

@@ -40,15 +40,15 @@ namespace FarmaciaParcelar1.Frms
             this.btnRelatorioProdutos = new System.Windows.Forms.Button();
             this.btnRelatorioClientes = new System.Windows.Forms.Button();
             this.btnRelatorioFuncionarios = new System.Windows.Forms.Button();
-            this.BtnRelatorio = new System.Windows.Forms.Button();
             this.PainelCadastroEditarEliminarConsultarSubMenu = new System.Windows.Forms.Panel();
             this.BtnProduto = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
             this.BtnFuncionario = new System.Windows.Forms.Button();
             this.BtnCadastroEditarEliminarConsultar = new System.Windows.Forms.Button();
-            this.PainelLogo = new System.Windows.Forms.Panel();
             this.PainelForms = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnRelatorio = new System.Windows.Forms.Button();
+            this.PainelLogo = new System.Windows.Forms.Panel();
             this.GbUsuarioLogado = new FarmaciaParcelar1.Tools.myGroupBox();
             this.LblUsuarioLogado = new System.Windows.Forms.Label();
             this.PainelDeslizante.SuspendLayout();
@@ -208,22 +208,6 @@ namespace FarmaciaParcelar1.Frms
             this.btnRelatorioFuncionarios.UseVisualStyleBackColor = true;
             this.btnRelatorioFuncionarios.Click += new System.EventHandler(this.BtnRelatorioFuncionarios_Click);
             // 
-            // BtnRelatorio
-            // 
-            this.BtnRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnRelatorio.FlatAppearance.BorderSize = 0;
-            this.BtnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRelatorio.Location = new System.Drawing.Point(0, 274);
-            this.BtnRelatorio.Name = "BtnRelatorio";
-            this.BtnRelatorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnRelatorio.Size = new System.Drawing.Size(346, 45);
-            this.BtnRelatorio.TabIndex = 4;
-            this.BtnRelatorio.Text = "Relatório";
-            this.BtnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRelatorio.UseVisualStyleBackColor = true;
-            this.BtnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
-            // 
             // PainelCadastroEditarEliminarConsultarSubMenu
             // 
             this.PainelCadastroEditarEliminarConsultarSubMenu.BackColor = System.Drawing.Color.LimeGreen;
@@ -297,18 +281,6 @@ namespace FarmaciaParcelar1.Frms
             this.BtnCadastroEditarEliminarConsultar.UseVisualStyleBackColor = true;
             this.BtnCadastroEditarEliminarConsultar.Click += new System.EventHandler(this.BtnCadastro_Click);
             // 
-            // PainelLogo
-            // 
-            this.PainelLogo.BackColor = System.Drawing.Color.LightGreen;
-            this.PainelLogo.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.farmcia_logo;
-            this.PainelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PainelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PainelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PainelLogo.Name = "PainelLogo";
-            this.PainelLogo.Size = new System.Drawing.Size(346, 85);
-            this.PainelLogo.TabIndex = 0;
-            this.PainelLogo.Click += new System.EventHandler(this.PainelLogo_Click);
-            // 
             // PainelForms
             // 
             this.PainelForms.BackColor = System.Drawing.Color.LightGreen;
@@ -330,6 +302,34 @@ namespace FarmaciaParcelar1.Frms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // BtnRelatorio
+            // 
+            this.BtnRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRelatorio.FlatAppearance.BorderSize = 0;
+            this.BtnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRelatorio.Location = new System.Drawing.Point(0, 274);
+            this.BtnRelatorio.Name = "BtnRelatorio";
+            this.BtnRelatorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnRelatorio.Size = new System.Drawing.Size(346, 45);
+            this.BtnRelatorio.TabIndex = 4;
+            this.BtnRelatorio.Text = "Relatório";
+            this.BtnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRelatorio.UseVisualStyleBackColor = true;
+            this.BtnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
+            // 
+            // PainelLogo
+            // 
+            this.PainelLogo.BackColor = System.Drawing.Color.LightGreen;
+            this.PainelLogo.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.farmcia_logo;
+            this.PainelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PainelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PainelLogo.Location = new System.Drawing.Point(0, 0);
+            this.PainelLogo.Name = "PainelLogo";
+            this.PainelLogo.Size = new System.Drawing.Size(346, 85);
+            this.PainelLogo.TabIndex = 0;
+            this.PainelLogo.Click += new System.EventHandler(this.PainelLogo_Click);
             // 
             // GbUsuarioLogado
             // 

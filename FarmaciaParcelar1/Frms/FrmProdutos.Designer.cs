@@ -54,26 +54,26 @@ namespace FarmaciaParcelar1.Frms
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.BtnLimpar = new System.Windows.Forms.Button();
-            this.BtnConsultar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtFabricante = new System.Windows.Forms.TextBox();
             this.TxtFornecedor = new System.Windows.Forms.TextBox();
             this.TxtQuantidadeMinima = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnLimpar = new System.Windows.Forms.Button();
+            this.BtnConsultar = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 90);
+            this.label1.Location = new System.Drawing.Point(13, 148);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 20);
@@ -83,7 +83,7 @@ namespace FarmaciaParcelar1.Frms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 131);
+            this.label2.Location = new System.Drawing.Point(13, 189);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
@@ -93,7 +93,7 @@ namespace FarmaciaParcelar1.Frms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 173);
+            this.label3.Location = new System.Drawing.Point(13, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
@@ -102,7 +102,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // TxtID
             // 
-            this.TxtID.Location = new System.Drawing.Point(126, 84);
+            this.TxtID.Location = new System.Drawing.Point(127, 142);
             this.TxtID.Margin = new System.Windows.Forms.Padding(4);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(234, 26);
@@ -111,7 +111,7 @@ namespace FarmaciaParcelar1.Frms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 214);
+            this.label4.Location = new System.Drawing.Point(13, 272);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
@@ -121,7 +121,7 @@ namespace FarmaciaParcelar1.Frms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 263);
+            this.label5.Location = new System.Drawing.Point(13, 321);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
@@ -131,7 +131,7 @@ namespace FarmaciaParcelar1.Frms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 318);
+            this.label6.Location = new System.Drawing.Point(13, 376);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 20);
@@ -141,7 +141,7 @@ namespace FarmaciaParcelar1.Frms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 373);
+            this.label7.Location = new System.Drawing.Point(13, 431);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 20);
@@ -151,7 +151,7 @@ namespace FarmaciaParcelar1.Frms
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 431);
+            this.label9.Location = new System.Drawing.Point(13, 489);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
@@ -161,7 +161,7 @@ namespace FarmaciaParcelar1.Frms
             // DtpDataValidade
             // 
             this.DtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDataValidade.Location = new System.Drawing.Point(73, 255);
+            this.DtpDataValidade.Location = new System.Drawing.Point(74, 313);
             this.DtpDataValidade.Margin = new System.Windows.Forms.Padding(4);
             this.DtpDataValidade.Name = "DtpDataValidade";
             this.DtpDataValidade.Size = new System.Drawing.Size(156, 26);
@@ -169,7 +169,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // TxtDescricao
             // 
-            this.TxtDescricao.Location = new System.Drawing.Point(126, 310);
+            this.TxtDescricao.Location = new System.Drawing.Point(127, 368);
             this.TxtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(234, 26);
@@ -177,7 +177,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // TxtQuantidade
             // 
-            this.TxtQuantidade.Location = new System.Drawing.Point(127, 367);
+            this.TxtQuantidade.Location = new System.Drawing.Point(128, 425);
             this.TxtQuantidade.Margin = new System.Windows.Forms.Padding(4);
             this.TxtQuantidade.Name = "TxtQuantidade";
             this.TxtQuantidade.Size = new System.Drawing.Size(233, 26);
@@ -185,7 +185,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // TxtValorFinal
             // 
-            this.TxtValorFinal.Location = new System.Drawing.Point(113, 425);
+            this.TxtValorFinal.Location = new System.Drawing.Point(114, 483);
             this.TxtValorFinal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorFinal.Name = "TxtValorFinal";
             this.TxtValorFinal.Size = new System.Drawing.Size(246, 26);
@@ -193,7 +193,7 @@ namespace FarmaciaParcelar1.Frms
             // 
             // TxtNome
             // 
-            this.TxtNome.Location = new System.Drawing.Point(81, 208);
+            this.TxtNome.Location = new System.Drawing.Point(82, 266);
             this.TxtNome.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(279, 26);
@@ -214,7 +214,7 @@ namespace FarmaciaParcelar1.Frms
             this.Descrição,
             this.Quantidade,
             this.ValorFinal});
-            this.DgvProdutos.Location = new System.Drawing.Point(417, 118);
+            this.DgvProdutos.Location = new System.Drawing.Point(418, 266);
             this.DgvProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.DgvProdutos.Name = "DgvProdutos";
             this.DgvProdutos.ReadOnly = true;
@@ -308,96 +308,30 @@ namespace FarmaciaParcelar1.Frms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(689, 62);
+            this.label10.Location = new System.Drawing.Point(690, 210);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(157, 38);
             this.label10.TabIndex = 19;
             this.label10.Text = "Produtos:";
             // 
-            // BtnLimpar
-            // 
-            this.BtnLimpar.Location = new System.Drawing.Point(417, 13);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(119, 46);
-            this.BtnLimpar.TabIndex = 24;
-            this.BtnLimpar.Text = "Limpar";
-            this.BtnLimpar.UseVisualStyleBackColor = true;
-            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
-            // BtnConsultar
-            // 
-            this.BtnConsultar.Location = new System.Drawing.Point(891, 408);
-            this.BtnConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnConsultar.Name = "BtnConsultar";
-            this.BtnConsultar.Size = new System.Drawing.Size(100, 100);
-            this.BtnConsultar.TabIndex = 23;
-            this.BtnConsultar.Text = "Consultar";
-            this.BtnConsultar.UseVisualStyleBackColor = true;
-            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Location = new System.Drawing.Point(729, 408);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(100, 100);
-            this.BtnEliminar.TabIndex = 22;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Location = new System.Drawing.Point(574, 408);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(100, 100);
-            this.BtnEditar.TabIndex = 21;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.Location = new System.Drawing.Point(417, 408);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(100, 100);
-            this.BtnSalvar.TabIndex = 20;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
-            this.BtnSalvar.Click += new System.EventHandler(this.BtnAdicionar_Click);
-            // 
-            // BtnPesquisar
-            // 
-            this.BtnPesquisar.Location = new System.Drawing.Point(417, 64);
-            this.BtnPesquisar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(119, 46);
-            this.BtnPesquisar.TabIndex = 25;
-            this.BtnPesquisar.Text = "Pesquisar";
-            this.BtnPesquisar.UseVisualStyleBackColor = true;
-            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
             // TxtFabricante
             // 
-            this.TxtFabricante.Location = new System.Drawing.Point(126, 125);
+            this.TxtFabricante.Location = new System.Drawing.Point(127, 183);
             this.TxtFabricante.Name = "TxtFabricante";
             this.TxtFabricante.Size = new System.Drawing.Size(233, 26);
             this.TxtFabricante.TabIndex = 26;
             // 
             // TxtFornecedor
             // 
-            this.TxtFornecedor.Location = new System.Drawing.Point(126, 167);
+            this.TxtFornecedor.Location = new System.Drawing.Point(127, 225);
             this.TxtFornecedor.Name = "TxtFornecedor";
             this.TxtFornecedor.Size = new System.Drawing.Size(233, 26);
             this.TxtFornecedor.TabIndex = 27;
             // 
             // TxtQuantidadeMinima
             // 
-            this.TxtQuantidadeMinima.Location = new System.Drawing.Point(172, 482);
+            this.TxtQuantidadeMinima.Location = new System.Drawing.Point(173, 540);
             this.TxtQuantidadeMinima.Margin = new System.Windows.Forms.Padding(4);
             this.TxtQuantidadeMinima.Name = "TxtQuantidadeMinima";
             this.TxtQuantidadeMinima.Size = new System.Drawing.Size(187, 26);
@@ -406,60 +340,150 @@ namespace FarmaciaParcelar1.Frms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 488);
+            this.label11.Location = new System.Drawing.Point(13, 546);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 20);
             this.label11.TabIndex = 28;
             this.label11.Text = "Quantidade Minima:";
             // 
-            // BtnFechar
-            // 
-            this.BtnFechar.Location = new System.Drawing.Point(543, 13);
-            this.BtnFechar.Name = "BtnFechar";
-            this.BtnFechar.Size = new System.Drawing.Size(119, 46);
-            this.BtnFechar.TabIndex = 33;
-            this.BtnFechar.Text = "Fechar";
-            this.BtnFechar.UseVisualStyleBackColor = true;
-            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
-            // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(1052, 408);
+            this.BtnCancelar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.task_checklist_remove;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnCancelar.Location = new System.Drawing.Point(1029, 559);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(100, 100);
-            this.BtnCancelar.TabIndex = 36;
+            this.BtnCancelar.Size = new System.Drawing.Size(148, 171);
+            this.BtnCancelar.TabIndex = 43;
             this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Location = new System.Drawing.Point(543, 65);
+            this.BtnNovo.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.task_checklist_add;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnNovo.Location = new System.Drawing.Point(418, 22);
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(119, 46);
-            this.BtnNovo.TabIndex = 35;
+            this.BtnNovo.Size = new System.Drawing.Size(148, 171);
+            this.BtnNovo.TabIndex = 42;
             this.BtnNovo.Text = "Novo";
+            this.BtnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // BtnFechar
+            // 
+            this.BtnFechar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.logout_1;
+            this.BtnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnFechar.Location = new System.Drawing.Point(880, 22);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(148, 171);
+            this.BtnFechar.TabIndex = 41;
+            this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
+            // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.binocular;
+            this.BtnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPesquisar.Location = new System.Drawing.Point(572, 22);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(148, 171);
+            this.BtnPesquisar.TabIndex = 40;
+            this.BtnPesquisar.Text = "Pesquisar";
+            this.BtnPesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.AllowDrop = true;
+            this.BtnEliminar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.bin_2;
+            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEliminar.Location = new System.Drawing.Point(875, 559);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(148, 171);
+            this.BtnEliminar.TabIndex = 39;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnLimpar
+            // 
+            this.BtnLimpar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.cleaning_broom;
+            this.BtnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLimpar.Location = new System.Drawing.Point(726, 22);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(148, 171);
+            this.BtnLimpar.TabIndex = 38;
+            this.BtnLimpar.Text = "Limpar";
+            this.BtnLimpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            // 
+            // BtnConsultar
+            // 
+            this.BtnConsultar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.checklist;
+            this.BtnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnConsultar.Location = new System.Drawing.Point(721, 559);
+            this.BtnConsultar.Name = "BtnConsultar";
+            this.BtnConsultar.Size = new System.Drawing.Size(148, 171);
+            this.BtnConsultar.TabIndex = 37;
+            this.BtnConsultar.Text = "Consultar";
+            this.BtnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnConsultar.UseVisualStyleBackColor = true;
+            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.pen_write_paper;
+            this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEditar.Location = new System.Drawing.Point(567, 559);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(148, 171);
+            this.BtnEditar.TabIndex = 36;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.add_bold;
+            this.BtnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSalvar.Location = new System.Drawing.Point(413, 559);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(148, 171);
+            this.BtnSalvar.TabIndex = 35;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1162, 579);
+            this.ClientSize = new System.Drawing.Size(1162, 828);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnNovo);
             this.Controls.Add(this.BtnFechar);
+            this.Controls.Add(this.BtnPesquisar);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.BtnLimpar);
+            this.Controls.Add(this.BtnConsultar);
+            this.Controls.Add(this.BtnEditar);
+            this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxtQuantidadeMinima);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TxtFornecedor);
             this.Controls.Add(this.TxtFabricante);
-            this.Controls.Add(this.BtnPesquisar);
-            this.Controls.Add(this.BtnLimpar);
-            this.Controls.Add(this.BtnConsultar);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnEditar);
-            this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.DgvProdutos);
             this.Controls.Add(this.TxtNome);
@@ -505,17 +529,10 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.TextBox TxtNome;
         private System.Windows.Forms.DataGridView DgvProdutos;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button BtnLimpar;
-        private System.Windows.Forms.Button BtnConsultar;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.Button BtnPesquisar;
         private System.Windows.Forms.TextBox TxtFabricante;
         private System.Windows.Forms.TextBox TxtFornecedor;
         private System.Windows.Forms.TextBox TxtQuantidadeMinima;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantiadeMinima;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fabricante;
@@ -527,5 +544,12 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorFinal;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnPesquisar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnLimpar;
+        private System.Windows.Forms.Button BtnConsultar;
+        private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.Button BtnSalvar;
     }
 }

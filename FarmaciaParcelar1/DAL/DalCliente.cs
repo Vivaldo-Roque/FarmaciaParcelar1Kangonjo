@@ -106,7 +106,9 @@ namespace FarmaciaParcelar1.DAL
         public DataTable CarregarDataGridView()
         {
             DataTable dataTable = new DataTable();
-            OleDbCommand cmd = new OleDbCommand($"select * from cliente", conexao.ObjetoConexao);
+            OleDbCommand cmd = new OleDbCommand(@"SELECT cliente.idcliente, cliente.nome, cliente.bi, genero.genero, cliente.data, EstadoCivil.EstadoCivil, cliente.telefone, cliente.email, cliente.dataRegisto
+FROM (cliente INNER JOIN EstadoCivil ON cliente.idestadoCivil = EstadoCivil.idEstadoCivil) INNER JOIN genero ON cliente.idgenero = genero.idgenero;
+", conexao.ObjetoConexao);
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
             adapter.Fill(dataTable);
             return dataTable;

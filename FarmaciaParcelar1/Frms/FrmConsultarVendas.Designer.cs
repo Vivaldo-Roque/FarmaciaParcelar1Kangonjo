@@ -149,12 +149,14 @@ namespace FarmaciaParcelar1.Frms
             // 
             // BtnFechar
             // 
+            this.BtnFechar.BackColor = System.Drawing.Color.Red;
+            this.BtnFechar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.remove_bold;
+            this.BtnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnFechar.Location = new System.Drawing.Point(484, 854);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(224, 108);
             this.BtnFechar.TabIndex = 6;
-            this.BtnFechar.Text = "Fechar";
-            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.UseVisualStyleBackColor = false;
             this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // FrmConsultarVendas
