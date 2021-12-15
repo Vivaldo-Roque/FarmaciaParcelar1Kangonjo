@@ -31,8 +31,8 @@ namespace FarmaciaParcelar1.Frms
             CmbCliente.ValueMember = "idcliente";
             CmbCliente.DisplayMember = "nome";
             CmbCliente.DataSource = cliente.CarregarDataGridView();
-            Limpar();
             CmbCliente.SelectedIndex = -1;
+            Limpar();
         }
 
         public void LimparDgvVendas()

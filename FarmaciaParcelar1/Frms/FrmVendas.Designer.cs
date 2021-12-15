@@ -55,9 +55,9 @@ namespace FarmaciaParcelar1.Frms
             this.label5 = new System.Windows.Forms.Label();
             this.TxtPesquisarProduto = new System.Windows.Forms.TextBox();
             this.GbTotal = new System.Windows.Forms.GroupBox();
+            this.TxtDinheiro = new FarmaciaParcelar1.Controles.MoneyBox();
             this.TxtTroco = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.TxtDinheiro = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -356,9 +356,9 @@ namespace FarmaciaParcelar1.Frms
             // 
             // GbTotal
             // 
+            this.GbTotal.Controls.Add(this.TxtDinheiro);
             this.GbTotal.Controls.Add(this.TxtTroco);
             this.GbTotal.Controls.Add(this.label18);
-            this.GbTotal.Controls.Add(this.TxtDinheiro);
             this.GbTotal.Controls.Add(this.label17);
             this.GbTotal.Controls.Add(this.TxtTotal);
             this.GbTotal.Controls.Add(this.label16);
@@ -381,6 +381,15 @@ namespace FarmaciaParcelar1.Frms
             this.GbTotal.TabStop = false;
             this.GbTotal.Text = "Total";
             // 
+            // TxtDinheiro
+            // 
+            this.TxtDinheiro.Location = new System.Drawing.Point(87, 175);
+            this.TxtDinheiro.Name = "TxtDinheiro";
+            this.TxtDinheiro.Size = new System.Drawing.Size(100, 22);
+            this.TxtDinheiro.TabIndex = 16;
+            this.TxtDinheiro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtDinheiro.TextChanged += new System.EventHandler(this.TxtDinheiro_TextChanged);
+            // 
             // TxtTroco
             // 
             this.TxtTroco.Location = new System.Drawing.Point(87, 209);
@@ -393,21 +402,11 @@ namespace FarmaciaParcelar1.Frms
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(19, 213);
+            this.label18.Location = new System.Drawing.Point(32, 212);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(49, 17);
             this.label18.TabIndex = 14;
             this.label18.Text = "Troco:";
-            // 
-            // TxtDinheiro
-            // 
-            this.TxtDinheiro.Location = new System.Drawing.Point(87, 176);
-            this.TxtDinheiro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TxtDinheiro.Name = "TxtDinheiro";
-            this.TxtDinheiro.Size = new System.Drawing.Size(100, 22);
-            this.TxtDinheiro.TabIndex = 13;
-            this.TxtDinheiro.TextChanged += new System.EventHandler(this.TxtDinheiro_TextChanged);
-            this.TxtDinheiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDinheiro_KeyPress);
             // 
             // label17
             // 
@@ -430,11 +429,11 @@ namespace FarmaciaParcelar1.Frms
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 145);
+            this.label16.Location = new System.Drawing.Point(37, 149);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 17);
+            this.label16.Size = new System.Drawing.Size(44, 17);
             this.label16.TabIndex = 10;
-            this.label16.Text = "Total KZ:";
+            this.label16.Text = "Total:";
             // 
             // TxtDescontoValorEmKZ
             // 
@@ -467,7 +466,7 @@ namespace FarmaciaParcelar1.Frms
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 95);
+            this.label15.Location = new System.Drawing.Point(19, 96);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(72, 17);
             this.label15.TabIndex = 6;
@@ -522,11 +521,11 @@ namespace FarmaciaParcelar1.Frms
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 25);
+            this.label9.Location = new System.Drawing.Point(19, 26);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 17);
+            this.label9.Size = new System.Drawing.Size(68, 17);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Sub total KZ:";
+            this.label9.Text = "Sub total:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnGravar
@@ -610,6 +609,7 @@ namespace FarmaciaParcelar1.Frms
             this.BtnCancelar.TabIndex = 5;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // LblData
             // 
@@ -717,17 +717,14 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.Label LblData;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Timer Timer1;
-        private System.Windows.Forms.TextBox TxtDinheiro;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox TxtDescontoValorEmKZ;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TxtDescontoPercentagem;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox TxtImpostoValorEmKZ;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TxtImpostoPercentagem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TxtSubTotal;
         private System.Windows.Forms.TextBox TxtTroco;
@@ -744,5 +741,8 @@ namespace FarmaciaParcelar1.Frms
         private System.Windows.Forms.ColumnHeader QuantidadeVenda;
         private System.Windows.Forms.ColumnHeader ValorTotal;
         private System.Windows.Forms.Button BtnFechar;
+        private Controles.MoneyBox TxtDinheiro;
+        private System.Windows.Forms.TextBox TxtDescontoPercentagem;
+        private System.Windows.Forms.TextBox TxtImpostoPercentagem;
     }
 }

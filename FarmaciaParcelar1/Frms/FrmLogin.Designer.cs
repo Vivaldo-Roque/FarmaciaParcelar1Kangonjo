@@ -30,19 +30,57 @@ namespace FarmaciaParcelar1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnEntrar = new System.Windows.Forms.Button();
             this.myGroupBox1 = new FarmaciaParcelar1.Tools.myGroupBox();
             this.GbSenha = new FarmaciaParcelar1.Tools.myGroupBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.GbUsuario = new FarmaciaParcelar1.Tools.myGroupBox();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.CmbUsuario = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnSair = new System.Windows.Forms.Button();
-            this.BtnEntrar = new System.Windows.Forms.Button();
             this.myGroupBox1.SuspendLayout();
             this.GbSenha.SuspendLayout();
             this.GbUsuario.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BtnSair
+            // 
+            this.BtnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.BtnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSair.BackgroundImage")));
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSair.FlatAppearance.BorderSize = 0;
+            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnSair.ForeColor = System.Drawing.Color.White;
+            this.BtnSair.Location = new System.Drawing.Point(258, 303);
+            this.BtnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(246, 152);
+            this.BtnSair.TabIndex = 11;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // BtnEntrar
+            // 
+            this.BtnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(139)))), ((int)(((byte)(54)))));
+            this.BtnEntrar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.login_2;
+            this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnEntrar.FlatAppearance.BorderSize = 0;
+            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEntrar.ForeColor = System.Drawing.Color.White;
+            this.BtnEntrar.Location = new System.Drawing.Point(12, 303);
+            this.BtnEntrar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEntrar.Name = "BtnEntrar";
+            this.BtnEntrar.Size = new System.Drawing.Size(247, 152);
+            this.BtnEntrar.TabIndex = 10;
+            this.BtnEntrar.Text = "Entrar";
+            this.BtnEntrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // myGroupBox1
             // 
@@ -87,7 +125,7 @@ namespace FarmaciaParcelar1
             // GbUsuario
             // 
             this.GbUsuario.BorderColor = System.Drawing.Color.White;
-            this.GbUsuario.Controls.Add(this.TxtUsuario);
+            this.GbUsuario.Controls.Add(this.CmbUsuario);
             this.GbUsuario.ForeColor = System.Drawing.Color.White;
             this.GbUsuario.Location = new System.Drawing.Point(114, 80);
             this.GbUsuario.Name = "GbUsuario";
@@ -96,15 +134,14 @@ namespace FarmaciaParcelar1
             this.GbUsuario.TabStop = false;
             this.GbUsuario.Text = "Usuário";
             // 
-            // TxtUsuario
+            // CmbUsuario
             // 
-            this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Location = new System.Drawing.Point(23, 26);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(230, 19);
-            this.TxtUsuario.TabIndex = 2;
-            this.TxtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsuario_KeyDown);
+            this.CmbUsuario.FormattingEnabled = true;
+            this.CmbUsuario.Location = new System.Drawing.Point(23, 25);
+            this.CmbUsuario.Name = "CmbUsuario";
+            this.CmbUsuario.Size = new System.Drawing.Size(230, 28);
+            this.CmbUsuario.TabIndex = 0;
+            this.CmbUsuario.SelectedValueChanged += new System.EventHandler(this.CmbUsuario_SelectedValueChanged);
             // 
             // label1
             // 
@@ -124,44 +161,6 @@ namespace FarmaciaParcelar1
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 9;
             // 
-            // BtnSair
-            // 
-            this.BtnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.BtnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSair.BackgroundImage")));
-            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnSair.FlatAppearance.BorderSize = 0;
-            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnSair.ForeColor = System.Drawing.Color.White;
-            this.BtnSair.Location = new System.Drawing.Point(258, 303);
-            this.BtnSair.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(246, 152);
-            this.BtnSair.TabIndex = 11;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnSair.UseVisualStyleBackColor = false;
-            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // BtnEntrar
-            // 
-            this.BtnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(139)))), ((int)(((byte)(54)))));
-            this.BtnEntrar.BackgroundImage = global::FarmaciaParcelar1.Properties.Resources.login_2;
-            this.BtnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnEntrar.FlatAppearance.BorderSize = 0;
-            this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnEntrar.ForeColor = System.Drawing.Color.White;
-            this.BtnEntrar.Location = new System.Drawing.Point(12, 303);
-            this.BtnEntrar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(247, 152);
-            this.BtnEntrar.TabIndex = 10;
-            this.BtnEntrar.Text = "Entrar";
-            this.BtnEntrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnEntrar.UseVisualStyleBackColor = false;
-            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -173,6 +172,7 @@ namespace FarmaciaParcelar1
             this.Controls.Add(this.BtnEntrar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(516, 466);
             this.MinimumSize = new System.Drawing.Size(516, 466);
@@ -185,7 +185,6 @@ namespace FarmaciaParcelar1
             this.GbSenha.ResumeLayout(false);
             this.GbSenha.PerformLayout();
             this.GbUsuario.ResumeLayout(false);
-            this.GbUsuario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,11 +195,11 @@ namespace FarmaciaParcelar1
         private Tools.myGroupBox GbSenha;
         private System.Windows.Forms.TextBox TxtSenha;
         private Tools.myGroupBox GbUsuario;
-        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnEntrar;
+        private System.Windows.Forms.ComboBox CmbUsuario;
     }
 }
 

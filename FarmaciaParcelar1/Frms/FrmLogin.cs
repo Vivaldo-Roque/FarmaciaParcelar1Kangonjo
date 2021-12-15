@@ -23,15 +23,20 @@ namespace FarmaciaParcelar1
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            DalConexao conexao = new DalConexao(DadosDaConexao.StringDeConexao);
+            BllFuncionario bllFuncionario = new BllFuncionario(conexao);
+            CmbUsuario.DataSource = bllFuncionario.CarregarDataGridView();
+            CmbUsuario.DisplayMember = "usuario";
+            CmbUsuario.ValueMember = "usuario";
         }
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             ModeloFuncionario funcionario = new ModeloFuncionario();
             bool verificador;
-            funcionario.Usuario = TxtUsuario.Text;
+            funcionario.Usuario = CmbUsuario.SelectedValue.ToString();
             funcionario.Senha = TxtSenha.Text;
+
 
             if (String.IsNullOrEmpty(funcionario.Usuario) == true || String.IsNullOrEmpty(funcionario.Senha) == true)
             {
@@ -75,6 +80,11 @@ namespace FarmaciaParcelar1
             {
                 BtnEntrar_Click(sender, e);
             }
+        }
+
+        private void CmbUsuario_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

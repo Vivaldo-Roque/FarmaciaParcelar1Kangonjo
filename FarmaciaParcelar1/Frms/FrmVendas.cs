@@ -120,7 +120,7 @@ namespace FarmaciaParcelar1.Frms
             var items = new ListViewItem(new string[] { produto.ID.ToString(), produto.Nome, produto.ValorFinal.ToString("#,##0.00"), TxtQuantidadeVenda.Text, (produto.ValorFinal * Convert.ToInt32(TxtQuantidadeVenda.Text)).ToString("#,##0.00") });
             LvItemsVenda.Items.Add(items);
             subtotal = SomarColuna(LvItemsVenda);
-            TxtSubTotal.Text = subtotal.ToString("#,##0.00");
+            TxtSubTotal.Text = subtotal.ToString("#,##0.00") + " Kz";
         }
 
         private void BtnRemoverItem_Click(object sender, EventArgs e)
@@ -135,23 +135,12 @@ namespace FarmaciaParcelar1.Frms
 
         private void TxtDinheiro_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(TxtDinheiro.Text) == false)
+            if(String.IsNullOrEmpty(TxtDinheiro.Text) == false)
             {
-                if (Convert.ToDecimal(TxtDinheiro.Text) <= 0)
-                {
-                    MessageBox.Show("Insira uma quantidade válida!", "Dinheiro");
-                    TxtQuantidadeVenda.Text = "1";
-                }
-                else
-                {
-                    dinheiro = Convert.ToDecimal(TxtDinheiro.Text);
-                    TxtDinheiro.Text = dinheiro.ToString("#,##0.00");
-                    troco = dinheiro - total;
-                    TxtTroco.Text = troco.ToString("#,##0.00");
-                }
+                dinheiro = Convert.ToDecimal(TxtDinheiro.Text.Replace("Kz ",""));
+                troco = dinheiro - total;
+                TxtTroco.Text = troco.ToString("#,##0.00") + " Kz";
             }
-
-
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)
@@ -163,7 +152,7 @@ namespace FarmaciaParcelar1.Frms
             BllItemVenda itemVendas = new BllItemVenda(conexao);
             long vendaID;
 
-            if (Convert.ToDecimal(TxtDinheiro.Text) <= Convert.ToDecimal(TxtTotal.Text) && Convert.ToDecimal(TxtImpostoPercentagem.Text) <= 0 && Convert.ToDecimal(TxtDescontoPercentagem.Text) <= 0 && Convert.ToDecimal(TxtDinheiro.Text) <= 0)
+            if (Convert.ToDecimal(TxtDinheiro.Text.Replace("Kz ","")) <= Convert.ToDecimal(TxtTotal.Text.Replace(" Kz","")) && Convert.ToDecimal(TxtImpostoPercentagem.Text) <= 0 && Convert.ToDecimal(TxtDescontoPercentagem.Text) <= 0 && Convert.ToDecimal(TxtDinheiro.Text) <= 0)
             {
                 MessageBox.Show("Preencha todos os campos devidamente", "Venda");
             }
@@ -192,6 +181,7 @@ namespace FarmaciaParcelar1.Frms
                     itemVendas.Adicionar(itemVenda);
                 }
             }
+            this.Close();
         }
 
         private void FrmVendas_FormClosed(object sender, FormClosedEventArgs e)
@@ -217,12 +207,36 @@ namespace FarmaciaParcelar1.Frms
 
         private void TxtQuantidadeVenda_TextChanged(object sender, EventArgs e)
         {
+            DalConexao conexao = new DalConexao(DadosDaConexao.StringDeConexao);
+            BllEstoque bllEstoque = new BllEstoque(conexao);
+
+            DataTable dt = bllEstoque.CarregarDataGridView();
+
+            DataRow dr = dt.AsEnumerable()
+               .SingleOrDefault(r => r.Field<String>("produtos") == produto.Nome);
+
+            int estoque = Convert.ToInt32(dr.Field<double>("estoque final"));
+
+            estoque = estoque - produto.QuantidadeMinima;
+
             if (String.IsNullOrEmpty(TxtQuantidadeVenda.Text) == false)
             {
-                if (Convert.ToInt32(TxtQuantidadeVenda.Text) <= 0)
+                if (Convert.ToInt32(TxtQuantidadeVenda.Text) <= 0 && estoque != 0)
                 {
                     MessageBox.Show("Insira uma quantidade válida!", "Quantidade");
                     TxtQuantidadeVenda.Text = "1";
+                }
+                else
+                if (Convert.ToInt32(TxtQuantidadeVenda.Text) > estoque)
+                {
+                    MessageBox.Show($"Estoque ({estoque}) !", "Quantidade");
+                    TxtQuantidadeVenda.Text = $"{estoque}";
+
+                }
+                else
+                if (Convert.ToInt32(TxtQuantidadeVenda.Text) == 0 && estoque == 0) {
+                    MessageBox.Show($"Estoque baixo!", "Quantidade");
+                    TxtQuantidadeVenda.Text = "";
                 }
             }
         }
@@ -247,21 +261,45 @@ namespace FarmaciaParcelar1.Frms
             OnlyNumbers(e);
         }
 
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            TxtClienteSelecionado.Text = "";
+            TxtProdutoSelecionado.Text = "";
+            TxtValor.Text = "";
+            TxtPesquisarCliente.Text = "";
+            TxtPesquisarProduto.Text = "";
+            TxtProdutoSelecionado.Text = "";
+            TxtQuantidade.Text = "";
+            TxtQuantidadeMinima.Text = "";
+            TxtQuantidadeVenda.Text = "";
+            LvItemsVenda.Clear();
+            TxtSubTotal.Text = "";
+            TxtTotal.Text = "";
+            TxtTroco.Text = "";
+            TxtDinheiro.Text = "";
+            TxtImpostoPercentagem.Text = "";
+            TxtDescontoPercentagem.Text = "";
+            GbProduto.Enabled = true;
+
+
+
+        }
+
         private void TxtImpostoPercentagem_TextChanged(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(TxtImpostoPercentagem.Text) == false)
             {
-                if (Convert.ToDecimal(TxtImpostoPercentagem.Text) <= 0)
+                if (Convert.ToDecimal(TxtImpostoPercentagem.Text) < 0)
                 {
                     MessageBox.Show("Insira um valor válido!", "Imposto");
-                    TxtImpostoPercentagem.Text = "1";
+                    TxtImpostoPercentagem.Text = "0";
                 }
                 else
                 {
-                    imposto = CalcularImposto(Convert.ToDecimal(TxtImpostoPercentagem.Text), Convert.ToDecimal(TxtSubTotal.Text));
-                    TxtImpostoValorEmKZ.Text = imposto.ToString("#,##0.00");
+                    imposto = CalcularImposto(Convert.ToDecimal(TxtImpostoPercentagem.Text), Convert.ToDecimal(TxtSubTotal.Text.Replace(" Kz", "")));
+                    TxtImpostoValorEmKZ.Text = imposto.ToString("#,##0.00") + " Kz";
                     total = subtotal + imposto;
-                    TxtTotal.Text = total.ToString("#,##0.00");
+                    TxtTotal.Text = total.ToString("#,##0.00") + " Kz";
                 }
             }
 
@@ -271,17 +309,17 @@ namespace FarmaciaParcelar1.Frms
         {
             if (String.IsNullOrEmpty(TxtDescontoPercentagem.Text) == false)
             {
-                if (Convert.ToDecimal(TxtDescontoPercentagem.Text) <= 0)
+                if (Convert.ToDecimal(TxtDescontoPercentagem.Text) < 0)
                 {
                     MessageBox.Show("Insira um valor válido!", "Desconto");
-                    TxtDescontoPercentagem.Text = "1";
+                    TxtDescontoPercentagem.Text = "0";
                 }
                 else
                 {
-                    desconto = CalcularDesconto(Convert.ToDecimal(TxtDescontoPercentagem.Text), Convert.ToDecimal(TxtSubTotal.Text));
-                    TxtDescontoValorEmKZ.Text = desconto.ToString("#,##0.00");
+                    desconto = CalcularDesconto(Convert.ToDecimal(TxtDescontoPercentagem.Text), Convert.ToDecimal(TxtSubTotal.Text.Replace(" Kz", "")));
+                    TxtDescontoValorEmKZ.Text = desconto.ToString("#,##0.00") + " Kz";
                     total -= desconto;
-                    TxtTotal.Text = total.ToString("#,##0.00");
+                    TxtTotal.Text = total.ToString("#,##0.00") + " Kz";
                 }
             }
         }

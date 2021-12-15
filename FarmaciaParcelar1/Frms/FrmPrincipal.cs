@@ -172,5 +172,17 @@ namespace FarmaciaParcelar1.Frms
             AbrirForm(new FrmRelatorioVendas());
             EsconderSubMenu();
         }
+
+        private void BtnConsultarEstoque_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FrmEstoque());
+            EsconderSubMenu();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new FrmInfo());
+            EsconderSubMenu();
+        }
     }
 }

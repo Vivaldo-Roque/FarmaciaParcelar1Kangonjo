@@ -46,7 +46,6 @@ namespace FarmaciaParcelar1.BLL
             DalFuncionario dalFuncionario = new DalFuncionario(conexao);
             return dalFuncionario.Localizar(valor);
         }
-
         public DataTable CarregarDataGridView() {
             DalFuncionario dalFuncionario = new DalFuncionario(conexao);
             return dalFuncionario.CarregarDataGridView();

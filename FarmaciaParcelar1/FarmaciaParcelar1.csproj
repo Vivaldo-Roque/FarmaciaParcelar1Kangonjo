@@ -118,11 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BllCliente.cs" />
+    <Compile Include="BLL\BllEstoque.cs" />
     <Compile Include="BLL\BllFuncionario.cs" />
     <Compile Include="BLL\BllVenda.cs" />
     <Compile Include="BLL\BllItemVenda.cs" />
     <Compile Include="BLL\BllProduto.cs" />
     <Compile Include="Classes\LogadoNoSistema.cs" />
+    <Compile Include="Controles\MoneyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReports\CrystalReportFuncionarios.cs">
       <DependentUpon>CrystalReportFuncionarios.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -150,6 +154,7 @@
     <Compile Include="DAL\DadosDaConexao.cs" />
     <Compile Include="DAL\DalCliente.cs" />
     <Compile Include="DAL\DalConexao.cs" />
+    <Compile Include="DAL\DalEstoque.cs" />
     <Compile Include="DAL\DalFuncionario.cs" />
     <Compile Include="DAL\DalVenda.cs" />
     <Compile Include="DAL\DalItemVenda.cs" />
@@ -174,11 +179,23 @@
     <Compile Include="Frms\FrmConsultarVendas.Designer.cs">
       <DependentUpon>FrmConsultarVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frms\FrmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmEstoque.Designer.cs">
+      <DependentUpon>FrmEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frms\FrmFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frms\FrmFuncionarios.Designer.cs">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\FrmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmInfo.Designer.cs">
+      <DependentUpon>FrmInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Frms\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -262,8 +279,14 @@
     <EmbeddedResource Include="Frms\FrmConsultarVendas.resx">
       <DependentUpon>FrmConsultarVendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmEstoque.resx">
+      <DependentUpon>FrmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frms\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmInfo.resx">
+      <DependentUpon>FrmInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

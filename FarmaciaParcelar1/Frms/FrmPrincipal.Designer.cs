@@ -33,6 +33,7 @@ namespace FarmaciaParcelar1.Frms
             this.PainelDeslizante = new System.Windows.Forms.Panel();
             this.BtnVendas = new System.Windows.Forms.Button();
             this.PainelConsultarSubMenu = new System.Windows.Forms.Panel();
+            this.BtnConsultarEstoque = new System.Windows.Forms.Button();
             this.BtnConsultarVenda = new System.Windows.Forms.Button();
             this.BtnConsultas = new System.Windows.Forms.Button();
             this.PainelRelatorioSubMenu = new System.Windows.Forms.Panel();
@@ -40,15 +41,18 @@ namespace FarmaciaParcelar1.Frms
             this.btnRelatorioProdutos = new System.Windows.Forms.Button();
             this.btnRelatorioClientes = new System.Windows.Forms.Button();
             this.btnRelatorioFuncionarios = new System.Windows.Forms.Button();
+            this.BtnRelatorio = new System.Windows.Forms.Button();
             this.PainelCadastroEditarEliminarConsultarSubMenu = new System.Windows.Forms.Panel();
             this.BtnProduto = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
             this.BtnFuncionario = new System.Windows.Forms.Button();
             this.BtnCadastroEditarEliminarConsultar = new System.Windows.Forms.Button();
+            this.PainelLogo = new System.Windows.Forms.Panel();
             this.PainelForms = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnRelatorio = new System.Windows.Forms.Button();
-            this.PainelLogo = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GbUsuarioLogado = new FarmaciaParcelar1.Tools.myGroupBox();
             this.LblUsuarioLogado = new System.Windows.Forms.Label();
             this.PainelDeslizante.SuspendLayout();
@@ -57,6 +61,7 @@ namespace FarmaciaParcelar1.Frms
             this.PainelCadastroEditarEliminarConsultarSubMenu.SuspendLayout();
             this.PainelForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.GbUsuarioLogado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +80,7 @@ namespace FarmaciaParcelar1.Frms
             this.PainelDeslizante.Dock = System.Windows.Forms.DockStyle.Left;
             this.PainelDeslizante.Location = new System.Drawing.Point(0, 0);
             this.PainelDeslizante.Name = "PainelDeslizante";
-            this.PainelDeslizante.Size = new System.Drawing.Size(367, 561);
+            this.PainelDeslizante.Size = new System.Drawing.Size(367, 614);
             this.PainelDeslizante.TabIndex = 6;
             // 
             // BtnVendas
@@ -84,7 +89,7 @@ namespace FarmaciaParcelar1.Frms
             this.BtnVendas.FlatAppearance.BorderSize = 0;
             this.BtnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVendas.Location = new System.Drawing.Point(0, 605);
+            this.BtnVendas.Location = new System.Drawing.Point(0, 650);
             this.BtnVendas.Name = "BtnVendas";
             this.BtnVendas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnVendas.Size = new System.Drawing.Size(346, 45);
@@ -97,12 +102,28 @@ namespace FarmaciaParcelar1.Frms
             // PainelConsultarSubMenu
             // 
             this.PainelConsultarSubMenu.BackColor = System.Drawing.Color.LimeGreen;
+            this.PainelConsultarSubMenu.Controls.Add(this.BtnConsultarEstoque);
             this.PainelConsultarSubMenu.Controls.Add(this.BtnConsultarVenda);
             this.PainelConsultarSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.PainelConsultarSubMenu.Location = new System.Drawing.Point(0, 551);
             this.PainelConsultarSubMenu.Name = "PainelConsultarSubMenu";
-            this.PainelConsultarSubMenu.Size = new System.Drawing.Size(346, 54);
+            this.PainelConsultarSubMenu.Size = new System.Drawing.Size(346, 99);
             this.PainelConsultarSubMenu.TabIndex = 8;
+            // 
+            // BtnConsultarEstoque
+            // 
+            this.BtnConsultarEstoque.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnConsultarEstoque.FlatAppearance.BorderSize = 0;
+            this.BtnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsultarEstoque.Location = new System.Drawing.Point(0, 45);
+            this.BtnConsultarEstoque.Name = "BtnConsultarEstoque";
+            this.BtnConsultarEstoque.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BtnConsultarEstoque.Size = new System.Drawing.Size(346, 45);
+            this.BtnConsultarEstoque.TabIndex = 2;
+            this.BtnConsultarEstoque.Text = "Estoque";
+            this.BtnConsultarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConsultarEstoque.UseVisualStyleBackColor = true;
+            this.BtnConsultarEstoque.Click += new System.EventHandler(this.BtnConsultarEstoque_Click);
             // 
             // BtnConsultarVenda
             // 
@@ -208,6 +229,22 @@ namespace FarmaciaParcelar1.Frms
             this.btnRelatorioFuncionarios.UseVisualStyleBackColor = true;
             this.btnRelatorioFuncionarios.Click += new System.EventHandler(this.BtnRelatorioFuncionarios_Click);
             // 
+            // BtnRelatorio
+            // 
+            this.BtnRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRelatorio.FlatAppearance.BorderSize = 0;
+            this.BtnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRelatorio.Location = new System.Drawing.Point(0, 274);
+            this.BtnRelatorio.Name = "BtnRelatorio";
+            this.BtnRelatorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnRelatorio.Size = new System.Drawing.Size(346, 45);
+            this.BtnRelatorio.TabIndex = 4;
+            this.BtnRelatorio.Text = "Relatório";
+            this.BtnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRelatorio.UseVisualStyleBackColor = true;
+            this.BtnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
+            // 
             // PainelCadastroEditarEliminarConsultarSubMenu
             // 
             this.PainelCadastroEditarEliminarConsultarSubMenu.BackColor = System.Drawing.Color.LimeGreen;
@@ -281,44 +318,6 @@ namespace FarmaciaParcelar1.Frms
             this.BtnCadastroEditarEliminarConsultar.UseVisualStyleBackColor = true;
             this.BtnCadastroEditarEliminarConsultar.Click += new System.EventHandler(this.BtnCadastro_Click);
             // 
-            // PainelForms
-            // 
-            this.PainelForms.BackColor = System.Drawing.Color.LightGreen;
-            this.PainelForms.Controls.Add(this.pictureBox1);
-            this.PainelForms.Controls.Add(this.GbUsuarioLogado);
-            this.PainelForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PainelForms.Location = new System.Drawing.Point(367, 0);
-            this.PainelForms.Name = "PainelForms";
-            this.PainelForms.Size = new System.Drawing.Size(659, 561);
-            this.PainelForms.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::FarmaciaParcelar1.Properties.Resources.farmcia_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BtnRelatorio
-            // 
-            this.BtnRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnRelatorio.FlatAppearance.BorderSize = 0;
-            this.BtnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRelatorio.Location = new System.Drawing.Point(0, 274);
-            this.BtnRelatorio.Name = "BtnRelatorio";
-            this.BtnRelatorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnRelatorio.Size = new System.Drawing.Size(346, 45);
-            this.BtnRelatorio.TabIndex = 4;
-            this.BtnRelatorio.Text = "Relatório";
-            this.BtnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRelatorio.UseVisualStyleBackColor = true;
-            this.BtnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
-            // 
             // PainelLogo
             // 
             this.PainelLogo.BackColor = System.Drawing.Color.LightGreen;
@@ -331,12 +330,62 @@ namespace FarmaciaParcelar1.Frms
             this.PainelLogo.TabIndex = 0;
             this.PainelLogo.Click += new System.EventHandler(this.PainelLogo_Click);
             // 
+            // PainelForms
+            // 
+            this.PainelForms.BackColor = System.Drawing.Color.LightGreen;
+            this.PainelForms.Controls.Add(this.pictureBox1);
+            this.PainelForms.Controls.Add(this.GbUsuarioLogado);
+            this.PainelForms.Controls.Add(this.menuStrip1);
+            this.PainelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PainelForms.Location = new System.Drawing.Point(367, 0);
+            this.PainelForms.Name = "PainelForms";
+            this.PainelForms.Size = new System.Drawing.Size(659, 614);
+            this.PainelForms.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::FarmaciaParcelar1.Properties.Resources.farmcia_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(181, 133);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hELPToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(659, 28);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // hELPToolStripMenuItem
+            // 
+            this.hELPToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
+            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.hELPToolStripMenuItem.Text = "HELP";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            // 
             // GbUsuarioLogado
             // 
             this.GbUsuarioLogado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.GbUsuarioLogado.BorderColor = System.Drawing.Color.White;
             this.GbUsuarioLogado.Controls.Add(this.LblUsuarioLogado);
-            this.GbUsuarioLogado.Location = new System.Drawing.Point(405, 417);
+            this.GbUsuarioLogado.Location = new System.Drawing.Point(405, 470);
             this.GbUsuarioLogado.Name = "GbUsuarioLogado";
             this.GbUsuarioLogado.Size = new System.Drawing.Size(242, 132);
             this.GbUsuarioLogado.TabIndex = 6;
@@ -358,11 +407,12 @@ namespace FarmaciaParcelar1.Frms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 561);
+            this.ClientSize = new System.Drawing.Size(1026, 614);
             this.Controls.Add(this.PainelForms);
             this.Controls.Add(this.PainelDeslizante);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(966, 608);
             this.Name = "FrmPrincipal";
@@ -376,7 +426,10 @@ namespace FarmaciaParcelar1.Frms
             this.PainelRelatorioSubMenu.ResumeLayout(false);
             this.PainelCadastroEditarEliminarConsultarSubMenu.ResumeLayout(false);
             this.PainelForms.ResumeLayout(false);
+            this.PainelForms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.GbUsuarioLogado.ResumeLayout(false);
             this.GbUsuarioLogado.PerformLayout();
             this.ResumeLayout(false);
@@ -400,10 +453,14 @@ namespace FarmaciaParcelar1.Frms
         private Tools.myGroupBox GbUsuarioLogado;
         private System.Windows.Forms.Label LblUsuarioLogado;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button BtnVendas;
         private System.Windows.Forms.Panel PainelConsultarSubMenu;
         private System.Windows.Forms.Button BtnConsultarVenda;
         private System.Windows.Forms.Button BtnConsultas;
         private System.Windows.Forms.Button BtnRelatorioVendas;
+        private System.Windows.Forms.Button BtnConsultarEstoque;
+        private System.Windows.Forms.Button BtnVendas;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }
