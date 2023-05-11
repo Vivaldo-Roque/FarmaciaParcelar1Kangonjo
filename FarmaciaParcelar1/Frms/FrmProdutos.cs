@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FarmaciaParcelar1.BLL;
 using FarmaciaParcelar1.DAL;
-using MySql.Data.MySqlClient;
 using FarmaciaParcelar1.Modelos;
 
 namespace FarmaciaParcelar1.Frms
